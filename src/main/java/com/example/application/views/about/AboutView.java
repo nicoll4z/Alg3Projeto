@@ -8,19 +8,19 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("About")
-@Route(value = "about", layout = MainLayout.class)
+@PageTitle("Sobre")
+@Route(value = "sobre", layout = MainLayout.class)
 public class AboutView extends VerticalLayout {
 
     public AboutView() {
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
-        img.setWidth("200px");
+        Image img = new Image("images/imageic-removebg-preview.png", "placeholder plant");
+        img.setWidth("350px");
         add(img);
 
-        add(new H2("This place intentionally left empty"));
-        add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
+        add(new H2("Sistema de gerenciamento de um Centro Educacional Infantil"));
+        add(new Paragraph("Site desenvolvido por Nicollas Kauã Pereira Reis."));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);

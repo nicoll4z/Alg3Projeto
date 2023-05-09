@@ -3,6 +3,12 @@ package com.example.application.views;
 
 import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
+import com.example.application.views.Aluno.AlunoView;
+import com.example.application.views.Atividade.AtividadeView;
+import com.example.application.views.Funcionario.FuncionarioView;
+import com.example.application.views.Matricula.MatriculaView;
+import com.example.application.views.Ponto.PontoView;
+import com.example.application.views.Responsavel.ResponsavelView;
 import com.example.application.views.about.AboutView;
 import com.example.application.views.helloworld.HelloWorldView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -39,7 +45,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("My App");
+        H1 appName = new H1("Centro Educional Infantil");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -53,8 +59,16 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        nav.addItem(new AppNavItem("Hello World", HelloWorldView.class, "la la-globe"));
-        nav.addItem(new AppNavItem("About", AboutView.class, "la la-file"));
+        nav.addItem(new AppNavItem("Bem-Vindo", HelloWorldView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Aluno", AlunoView.class, "la la-user-graduate"));
+        nav.addItem(new AppNavItem("Matricula", MatriculaView.class, "la la-book"));
+        nav.addItem(new AppNavItem("Responsável", ResponsavelView.class, "la la-id-card"));
+        nav.addItem(new AppNavItem("Funcionário", FuncionarioView.class, "la la-apple-alt"));
+        nav.addItem(new AppNavItem("Atividades", AtividadeView.class, "la la-clipboard"));
+        nav.addItem(new AppNavItem("Ponto", PontoView.class, "la la-clock-o"));
+        nav.addItem(new AppNavItem("Sobre", AboutView.class, "la la-file"));
+       
+       
 
         return nav;
     }
